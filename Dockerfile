@@ -9,8 +9,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y nano curl wget vim git gcc
 
 RUN apt-get install -y nginx php5-fpm php5-cli
 
-ENV abc=hello
-
 # Timezone
 RUN echo "Europe/Paris" | tee /etc/timezone
 RUN dpkg-reconfigure --frontend noninteractive tzdata
